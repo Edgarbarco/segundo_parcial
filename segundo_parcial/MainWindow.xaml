@@ -1,0 +1,26 @@
+﻿<Window x:Class="segundo_parcial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:segundo_parcial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBox x:Name="txtName" HorizontalAlignment="Center" Margin="5" Text="Nombre de la tarea"/>
+            <TextBox x:Name="txtDescription" HorizontalAlignment="Center" Margin="5" Text="Descripción de la tarea"/>
+            <DatePicker x:Name="datePicker" HorizontalAlignment="Center" Margin="5"/>
+            <Button x:Name="btnAddTask" Content="Agregar tarea" Margin="5" Click="btnAddTask_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="lstTasks" Grid.Row="2" Margin="5"/>
+    </Grid>
+</Window>
+
